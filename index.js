@@ -16,3 +16,8 @@ app.use(session({
 
 app.set('view engine', 'ejs');
 
+let userTokens = {};
+try {
+    userTokens = JSON.parse(fs.readFileSync('tokens.json', 'utf-8')) || {};
+} catch (err) {}
+
