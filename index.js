@@ -9,7 +9,7 @@ const port = process.env.PORT || 3000;
 
 //Session configuration
 app.use(session({
-    secret: 'your-secret-key', // Replace with a strong, random secret
+    secret: process.env.SESSION_SECRET, // Replace with a strong, random secret
     resave: false,
     saveUninitialized: false,
 }));
