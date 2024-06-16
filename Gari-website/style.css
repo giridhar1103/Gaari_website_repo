@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+  --bg-color: #000000;
+  --main-color: #8fed38;
+  --text-color: #fff;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+  
+section{
+    min-height: 100vh;
+    padding: 100px 150px;
+}
+
+a{
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.btn{
+    font-weight: 500;
+    border-radius: 20px;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    letter-spacing: 2px;
+    background: transparent;
+    color: var(--text-color);
+    box-shadow: 0 0 .5rem white;
+    transition: 0.5s ease;
+    cursor: pointer;
+  }
+
+.btn:hover{
+    box-shadow: 0 0 .8rem var(--main-color);
+}
+
+/* Navbar */
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 60px;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg-color);
+}
+
+#title{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.navigation{
+    margin-left: 20px;
+}
+
+.navigation a{
+    margin-left: 30px;
+}
+
+.navigation a:hover{
+    color: var(--main-color);
+}
+
+.connection-buttons .btn{
+    margin-left: 30px;
+    /* display: flex; */
+} 
+
+.connection-buttons .btn i{
+    font-size: 2rem;
+    /* background: red; */
+    /* margin-top: 20px; */
+}
+
+
+/* Falling coins */
+
+.star
+{
+position: absolute;
+top: -20px;
+color: #fff;
+animation: animate 5s linear forwards;
+z-index: -1;
+}
+.star::before
+{
+content: '\f005';
+font-family: fontAwesome;
+text-shadow: 0 0 5px #fff,
+0 0 20px #fff,
+0 0 50px #fff;
+border-radius: 50%;
+background: gold;
+}
+
+@keyframes animate
+{
+0%
+{
+transform: translateY(0) rotate(0deg);
+opacity: 1;
+}
+80%{
+opacity: 1;
+}
+100%
+{
+transform: translateY(100vh) rotate(360deg);
+opacity: 0;
+}
+}
+
+/* Home Page */
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 11%;
+}
+
+.container h1{
+    font-size: 8.5rem;
+    /* color: var(--main-color); */
+    font-family: Tiny5;
+    text-shadow: 0 5px 30px var(--main-color);
+}
+
+.container p{
+    font-size: 1.3rem;
+    margin-top: 10px;
+}
+
+.social{
+    display: flex;
+    margin-top: 50px;
+    width: 250px;
+    justify-content: space-between;
+}
+
+.social a i{
+    font-size: 3rem;
+    padding: 10px;
+    /* color: var(--bg-color); */
+}
+
+.social a{
+    text-align: center;
+    /* border: .5px solid var(--text-color); */
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--text-color);
+    transition: 0.5s ease;
+}
+
+.social a:hover{
+    box-shadow: 0 0 10px var(--main-color);
+}
+
+/* About page */
+
+#about{
+    display: flex;
+    align-items: center;
+    background: var(--text-color);
+    color: var(--bg-color);
+    flex-direction: column;
+}
+
+.abt-container{
+    margin-top: 50px;
+}
+
+.abt-container h1{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.abt-container h2{
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: none;
+}
+
+#cap{
+    text-align: center;
+}
+
+.ching-img img{
+    margin-left: 10%;
+    width: 85%;
+}
+
+.abt-container p{
+    font-size: 1.2rem;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+/* Airdrop Page */
+
+#airdrop{
+    display: flex;
+    align-items: center;
+}
+
+#airdrop h1{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.container2{
+    position: relative;
+    width: 24%;
+    margin-right: 80px;
+}
+
+.container1{
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container3{
+    width: 24%;
+    margin-left: 80px;
+}
+
+.airdrop-container p{
+    font-size: 1.2rem;
+    margin-top: 10px;
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+.criteria{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.criteria-box{
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px var(--main-color);
+    border-radius: 5px;
+}
+
+.criteria-box p{
+    padding: 15px;
+}
+
+.air-btn{
+    margin: auto;
+    margin-top: 30px;
+}
+
+
+/* Flip the coin page */
+
+.flip-container{
+    width: 45%;
+}
+
+#flip h1{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-top: 30px;
+    /* margin-bottom: 30px; */
+}
+
+.containerz{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-container{
+    text-align: center;
+    width: 45%;
+    margin-top: 30px;
+}
+
+#flip img{
+    width: 20%;
+    height: 350px;
+    margin-top: 60px;
+}
+
+.flip-content{
+    text-align: center;
+    padding: 15px;
+    margin: 20px 0px;
+}
+
+.flip-content p{
+    font-size: 1.2rem;
+}
+
+.flip-start{
+    margin: auto;
+    margin-top: 40px;
+}
+
+
+
+/* Footer section */
+
+footer{
+    width: 100%;
+    font-size: 1.3rem;
+    padding: 10px 30px;
+    text-align: center;
+    background: #2e2e2e;
+}

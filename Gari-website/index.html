@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/Gari-website/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-------- Scroll Reveal JS -------->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Move-It-Gari</title>
+</head>
+<body>
+    <!--------- NAVBAR --------->
+    <header>
+        <a href="#" id="title"><i class='bx bx-money-withdraw'></i>CHA-CHING</a>
+
+        <div class="navigation">
+            <a href="#about">About</a>
+            <a href="#airdrop">Airdrop</a>
+            <a href="#flip">Flip the Coin</a>
+        </div>
+
+        <div class="connection-buttons">
+            <a href="https://liquidswap.com/#/">
+                <button class="btn">
+                    <div><i class='bx bx-coin' ></i></div>
+                    <div>Buy Ching</div>
+                </button>
+            </a>
+            <a href="">
+                <button class="btn" id="connectWalletBtn">
+                    <div><i class='bx bx-wallet-alt' ></i></div>
+                    <div>Connect Wallet</div>
+                </button>
+            </a>
+        </div>
+    </header>
+
+    <!--------- Home Page --------->
+    <section id="home">
+        <div class="container">
+            <h1>CHA CHING</h1>
+            <p>CA: 0x61b6ec207878a636a31a5c4291a74b790cb5b7a7e14ed7f76f166146788eacf6::moon_coin::MoonCoin</p>
+            <div class="social">
+                <a href="#"><i class='bx bxl-telegram'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+            </div>
+        </div>    
+    </section>
+
+    <!--------- About Page --------->
+    <section id="about">
+        <div class="abt-container">
+            <h1>About</h1>
+            <h2>Powering the Future of Memecoins with Utility</h2>
+            <!-- <p id="cap">Trade more, Earn more</p> -->
+            <p>Leverage the Gari Bot for strategic trading and unlock additional $CHA-CHING on your volume. We are committed to build a strong community by collaborating with users to shape the future of memecoin. By fostering a thriving community, with a powerful network for users and enthusiasts. </p>
+        </div>
+        <div class="ching-img">
+            <img src="/assets/Episode_5-removebg-preview.png" alt="">
+        </div>
+    </section>
+
+    <!--------- Airdrop Page --------->
+    <section id="airdrop">
+        <img class="container2" src="/assets/dancing bob.gif" alt="img">
+
+        <div class="container1">
+            <div class="airdrop-container">
+                <h1>Airdrop</h1>
+                <p>Get rewarded for trading</p>
+            </div>
+            <div class="criteria">
+                <div class="criteria-box">
+                    <p><span>Criteria 1: </span>One must be stacking 2500 at Gari snapshot</p>
+                </div>
+                <div class="criteria-box">
+                    <p><span>Criteria 2: </span>Increased trading volume with the Gari Bot unlocks rewards in the form of $CHA-CHING.</p>
+                </div>
+            </div>
+            <a href="https://gari.network/" class="btn air-btn"><i class='bx bxs-gift' ></i> Get Airdrop</a>
+        </div>
+
+        <img class="container3" src="/assets/dancing bob.gif" alt="img">
+    </section>
+
+    <!--------- Flip the coin --------->
+    <section id="flip">
+        <h1>Flip the Coin</h1>
+        <div class="containerz">
+            
+        <div class="flip-container">
+            <div class="flip-content">
+                <p>Place the bet by waging some Ching</p>
+                <p>Select Head/Tail</p>
+                <p>Flip the coin</p>
+                <p>If you win, you get double the waged Ching</p>
+                <p>If you loose, you loose the waged Ching</p>
+            </div>
+            
+            <a href="" class="flip-start btn">Gamble<i class='bx bx-right-arrow-alt'></i></a>
+        </div>
+
+        <img src="/assets/coin toss.gif" alt="coin flip gif">
+        </div>
+    </section>
+
+    <!--------- Footer --------->
+    <footer>
+        <p>Copyright &copy; Cha-Ching 2024. All Rights Reserved</p>
+    </footer>
+
+    <!--------- Javascript File --------->
+    <script>
+        function stars() {
+        let e = document.createElement('div');
+        e.setAttribute('class', 'star');
+        document.body.appendChild(e);
+        e.style.left = Math.random()*+innerWidth+'px';
+
+        let size = Math.random() * 12;
+        let duration = Math.random()*3;
+
+        e.style.fontSize = 12 + size+'px';
+        e.style.animationDuration = 2 + duration+'s';
+
+        setTimeout(function(){
+            document.body.removeChild(e);
+        },5000)
+    }
+        setInterval(function() {
+        stars()
+        },100)
+    </script>
+
+    <script type="module" src="/Gari-website/script.js"></script>
+</body>
+</html>
